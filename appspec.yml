@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /home/deploy/myapp
+     destination: /home/deploy
 permissions:
-   - object: /home/deploy/myapp
+   - object: /home/deploy
      pattern: "**"
      owner: ubuntu
      group: ubuntu
@@ -13,6 +13,8 @@ permissions:
        - file
 hooks:
    BeforeInstall:
+    - location: scripts/installinginx.sh
+      runas: root
     - location: scripts/startnginx.sh
       runas: root
    AfterInstall:
