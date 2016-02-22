@@ -13,7 +13,7 @@ permissions:
        - file
 hooks:
    BeforeInstall:
-    - location: scripts/installinginx.sh
+    - location: scripts/installnginx.sh
       runas: root
     - location: scripts/startnginx.sh
       runas: root
