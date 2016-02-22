@@ -12,9 +12,6 @@ permissions:
      type:
        - file
 hooks:
-   BeforeInstall:
-    - location: scripts/startnginx.sh
-      runas: root
    AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
