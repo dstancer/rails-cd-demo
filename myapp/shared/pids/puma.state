@@ -1,0 +1,30 @@
+---
+pid: 1039
+config: !ruby/object:Puma::Configuration
+  cli_options: 
+  conf: 
+  options:
+    :min_threads: 1
+    :max_threads: 6
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/ubuntu/ror/app/shared/sockets/puma.sock
+    :workers: 1
+    :daemon: false
+    :mode: :http
+    :worker_timeout: 60
+    :worker_boot_timeout: 60
+    :worker_shutdown_timeout: 30
+    :remote_address: :socket
+    :config_file: config/puma.rb
+    :environment: production
+    :redirect_stdout: "/home/ubuntu/ror/app/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/ubuntu/ror/app/shared/log/puma.stderr.log"
+    :redirect_append: true
+    :pidfile: "/home/ubuntu/ror/app/shared/pids/puma.pid"
+    :state: "/home/ubuntu/ror/app/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1455274152918-1039
+    :control_url_temp: "/tmp/puma-status-1455274152918-1039"
+    :control_auth_token: a5b02a187842fdef58d02ad6ecb5f978
+    :tag: app
