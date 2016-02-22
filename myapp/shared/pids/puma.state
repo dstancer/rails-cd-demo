@@ -1,5 +1,5 @@
 ---
-pid: 1039
+pid: 18944
 config: !ruby/object:Puma::Configuration
   cli_options: 
   conf: 
@@ -9,7 +9,7 @@ config: !ruby/object:Puma::Configuration
     :quiet: false
     :debug: false
     :binds:
-    - unix:///home/ubuntu/ror/app/shared/sockets/puma.sock
+    - unix:///home/deploy/myapp/shared/sockets/puma.sock
     :workers: 1
     :daemon: false
     :mode: :http
@@ -19,12 +19,12 @@ config: !ruby/object:Puma::Configuration
     :remote_address: :socket
     :config_file: config/puma.rb
     :environment: production
-    :redirect_stdout: "/home/ubuntu/ror/app/shared/log/puma.stdout.log"
-    :redirect_stderr: "/home/ubuntu/ror/app/shared/log/puma.stderr.log"
+    :redirect_stdout: "/home/deploy/myapp/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/deploy/myapp/shared/log/puma.stderr.log"
     :redirect_append: true
-    :pidfile: "/home/ubuntu/ror/app/shared/pids/puma.pid"
-    :state: "/home/ubuntu/ror/app/shared/pids/puma.state"
-    :control_url: unix:///tmp/puma-status-1455274152918-1039
-    :control_url_temp: "/tmp/puma-status-1455274152918-1039"
-    :control_auth_token: a5b02a187842fdef58d02ad6ecb5f978
-    :tag: app
+    :pidfile: "/home/deploy/myapp/shared/pids/puma.pid"
+    :state: "/home/deploy/myapp/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1456182816783-18944
+    :control_url_temp: "/tmp/puma-status-1456182816783-18944"
+    :control_auth_token: a12588e4c2c2a63a61e67ac47594abfa
+    :tag: myapp
