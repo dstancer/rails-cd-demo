@@ -13,5 +13,5 @@ permissions:
        - file
 hooks:
    AfterInstall:
-    - location: scripts/restartnginx.sh
+    - location: scripts/restartservices.sh
       runas: root
